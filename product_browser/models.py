@@ -35,3 +35,8 @@ class OrderNote(BaseModel):
     note = db.StringProperty(required=True)
     #user = db.ReferenceProperty(User, required=True)
 
+class MenuItemRating(BaseModel):
+    menu_item = db.ReferenceProperty(MenuItem, required=True)
+    rating = db.RatingProperty(required=True)
+    #user = db.ReferenceProperty(User, required=True)
+    comment = db.StringProperty()
