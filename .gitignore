@@ -1,1 +1,5 @@
+#Archivos compilados de python
 *.pyc
+
+#Archivos swap de vim
+*.swp
