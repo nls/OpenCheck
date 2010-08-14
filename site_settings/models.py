@@ -30,3 +30,8 @@ class Establishment(BaseModel):
     phone = db.StringProperty()
     description = db.StringProperty()
     establishment_category = db.ReferenceProperty(EstablishmentCategory)
+
+class EstablishmentPaymentMethod(BaseModel):
+    establishment = db.ReferenceProperty(Establishment, required=True)
+    payment_type = db.StringProperty(required=True, choices=["PAYPAL", "GOOGLE CHECKOUT", "MONEYBOOKERS"}
+    account = db.StringProperty(required=True)
